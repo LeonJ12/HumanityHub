@@ -45,15 +45,56 @@ nav ul li a {
     font-size: 1.2rem;
     color: var(--TextColorSecondary);
 }
+nav ul li a:hover {
+    transition: 0.4s;
+    opacity: 20%;
+}
 
 .buttonMain {
     padding: 15px 20px;
+    border: 1px solid transparent;
     border-radius: 50px;
     text-decoration: none;
     color: var(--WhiteBackground);
     background-color: var(--PrimaryRed);
     font-size: 1.2rem;
     font-weight: 600;
+}
+.buttonMain:hover {
+    transition: 0.3s;
+    color: var(--PrimaryRed);
+    background-color: var(--WhiteBackground);
+    border: 1px solid var(--PrimaryRed);
+}
+.navContainer img {
+    animation: fadeIn-left 1.5s both;
+}
+.navContainer .navContent {
+    animation : fadeIn-right 1.5s 0.2s both;
+}
+@keyframes fadeIn-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        filter : blur(50px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+        filter:blur(0);
+    }
+}
+@keyframes fadeIn-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+        filter : blur(50px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+        filter:blur(0);
+    }
 }
     
 
