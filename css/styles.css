@@ -16,11 +16,15 @@ body {
 h1,h2 {
     font-family: "Merriweather Sans", sans-serif;
 }
+
+
+
+
 header{
-    padding: 35px 0;
+    padding: 35px 0 0 0;
 }
 .container{
-        max-width: 1600px;
+        max-width: 95%;
         background-color: var(--ContainerBackground);
         margin: auto;
         padding: 0 10px;
@@ -72,6 +76,57 @@ nav ul li a:hover {
 .navContainer .navContent {
     animation : fadeIn-right 1.5s 0.2s both;
 }
+
+
+
+
+.heroSection{
+    height: 84vh;
+    padding: 35px 0 0 0;
+}
+.HeroContainer{
+    background-image: url(../images/backgroundHero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.heroContent{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+.heroWrapper{
+    display:flex;
+    justify-content: space-around;
+}
+.heroLocation{
+    display:flex;
+    gap:5px;
+}
+
+.heroButtons {
+    display:flex;
+    gap:20px;
+}
+.buttonSecondary{
+    padding: 15px 20px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--PrimaryRed);
+    background-color: var(--WhiteBackground);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.buttonSecondary:hover {
+    transition: 0.3s;
+    color: var(--WhiteBackground);
+    background-color: var(--PrimaryRed);
+    border: 2px solid var(--WhiteBackground);
+}
+
+
+
 @keyframes fadeIn-left {
     0% {
         transform: translateX(-100%);
