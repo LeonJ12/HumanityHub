@@ -21,7 +21,7 @@ h1,h2 {
 
 
 header{
-    padding: 35px 0 0 0;
+    padding: 25px 0 0 0;
 }
 .container{
         max-width: 95%;
@@ -81,33 +81,53 @@ nav ul li a:hover {
 
 
 .heroSection{
-    height: 84vh;
-    padding: 35px 0 0 0;
+    height: calc(100vh - 106px);
+    padding: 25px 0 0 0;
 }
 .HeroContainer{
     background-image: url(../images/backgroundHero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .heroContent{
     display:flex;
     flex-direction: column;
     gap:50px;
+    max-width: 1300px;
+}
+.heroContent h1{
+    font-size: clamp(3rem, 5vw, 4.5rem);
+}
+.heroContent p{
+    font-size: 1.4rem;
+    padding-left: 50px;
 }
 .heroWrapper{
-    display:flex;
-    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .heroLocation{
     display:flex;
     gap:5px;
+    align-items: center;
 }
-
+.heroLocation h2 {
+    font-size: 1rem;
+}
+.heroLocation img {
+    max-width: 25px;
+    max-height: 25px;
+}
 .heroButtons {
     display:flex;
-    gap:20px;
+    gap:30px;
 }
+
 .buttonSecondary{
     padding: 15px 20px;
     border: 2px solid transparent;
