@@ -33,7 +33,7 @@ header{
         max-width: 1600px;
         background-color: var(--ContainerBackground);
         margin: auto;
-        padding: 0 10px;
+        padding: 0 20px;
         border-radius: 20px;
 }
 .navContainer{
@@ -154,10 +154,118 @@ section {
 }
 
 
+.actionsLocation{
+    display:flex;
+    gap:5px;
+    align-items: center;
+}
+.actionsLocation h2 {
+    font-size: 1rem;
+    color : var(--TextColorSecondary)
+}
+.actionsLocation img {
+    max-width: 25px;
+    max-height: 25px;
+    display: block;
+}
+.issueType{
+    display:flex;
+    gap:5px;
+    align-items: center;
+
+}
+.issueType h2 {
+    font-size: 0.8rem;
+    color : var(--TextColorSecondary)
+}
+.issueType img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.moneyStatus{
+    display:flex;
+    gap:5px;
+    align-items: center;
+}
+.moneyStatus h2{
+    font-size: 0.8rem;
+    color : var(--TextColorSecondary)
+}
+.moneyStatus img {
+    max-width: 30px;
+    max-height: 30px;
+}
 
 
+.previewContent {
+    display: flex;
+    gap: 100px;
+    align-items: center;
 
+}
 
+.previewText {
+    flex: 1.2; 
+}
+.previewText h1{
+    font-size: clamp(3rem, 5vw, 4.5rem);
+}
+
+.previewText p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+.previewCard {
+    flex: 0.8; 
+    display:flex;
+    justify-content: center;
+    max-width: 300px;
+}
+
+.actionCard{
+    display:flex;
+    flex-direction: column;
+    background-color: var(--WhiteBackground);
+    margin : 20px 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.mainPicture img {
+    max-width: 100%;
+}
+.contentType {
+    display:flex;
+    gap:40px;
+    justify-content: center;
+}
+.cardActivity
+{
+    display:flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+.actionCard:hover{
+    background-color: rgba(128, 128, 128, 0.452);
+    transition: 0.5s;
+}
+.cardBody {
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+.arrow{
+    color:var(--TextColorPrimary);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.arrow:hover {
+    transform: translateX(8px);
+    color: var(--PrimaryRed);
+}
 @keyframes fadeIn-left {
     0% {
         transform: translateX(-100%);
