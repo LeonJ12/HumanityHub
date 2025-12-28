@@ -121,7 +121,7 @@ section {
 }
 .heroLocation{
     display:flex;
-    gap:5px;
+    gap:4px;
     align-items: center;
 }
 .heroLocation h2 {
@@ -190,7 +190,7 @@ section {
 }
 .moneyStatus h2{
     font-size: 0.8rem;
-    color : var(--TextColorSecondary)
+    color : var(--TextColorSecondary);
 }
 .moneyStatus img {
     max-width: 30px;
@@ -266,6 +266,96 @@ section {
     transform: translateX(8px);
     color: var(--PrimaryRed);
 }
+
+
+.aboutContent{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    padding: 30px 0;
+    align-items: center;
+}
+.aboutContent h2 {
+    font-size: 1.2rem;
+    color : var(--TextColorSecondary);
+}
+.aboutMain {
+    display:flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aboutDonators, .aboutMoney, .aboutYear  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutDonators h1:hover, .aboutMoney h1:hover, .aboutYear h1:hover{
+    font-size: 5rem;
+    color: var(--TextColorPrimary);
+}
+.aboutDonators h1, .aboutMoney h1 , .aboutYear h1{
+    font-size: 5rem;
+    color: var(--PrimaryRed);
+}
+.aboutDonators p, .aboutMoney p , .aboutYear p{
+    font-size: 1rem;
+    color: var(--TextColorSecondary);
+}
+
+.aboutGoals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutGoals p{
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+.goalsList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.goalsList li {
+    font-size: 1.1rem;
+    display:flex;
+    gap:5px;
+}
+.goalsList li::after {
+    content: "✔";
+    color: var(--PrimaryRed);
+}
+.visionWrapper {
+    display:flex;
+    gap:30px;
+    width: 100%;
+    justify-content: center;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+.visionCard{
+    flex: 1;
+    background-color: var(--WhiteBackground);
+    border-top: 5px solid var(--PrimaryRed);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+.visionCard:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+
 @keyframes fadeIn-left {
     0% {
         transform: translateX(-100%);
