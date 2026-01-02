@@ -284,10 +284,12 @@ section {
     gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .aboutDonators, .aboutMoney, .aboutYear  {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
 }
@@ -351,8 +353,88 @@ section {
 .visionCard:hover {
     transform: translateY(-5px);
 }
+.visionCard h2{
+    font-size: 1.5rem;
+    color : var(--PrimaryRed);
+}
+.visionCard p{
+    font-size: 1rem;
+    color : var(--TextColorPrimary);
+}
 
+footer {
+    padding-top: 35px;
+    margin: 0 10px;
+}
 
+.footerContainer{
+    background-color: var(--WhiteBackground);
+}
+
+.footerContent{
+    display:grid;
+    grid-template-columns: 1.5fr 1.2fr;
+    gap: 50px;
+}
+.footerWeather{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footerWeather h2{
+    font-size: 3rem;
+    color: var(--ContainerBackground);
+    font-weight: 800;
+}
+.footerWeather p {
+    font-size: 2rem;
+}
+.weatherFirst , .weatherSecond{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footerContact{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+}
+
+.footerContact h2{
+    color: var(--TextColorPrimary);
+    font-size: 1.5rem;
+}
+.footerContact p{
+    color: var(--TextColorSecondary);
+    font-size: 1rem;
+}
+.footerContact a {
+    text-decoration: none;
+    color: var(--PrimaryRed);
+    font-size: 1rem;
+}
+
+.footerSocials{
+    display: flex;
+    gap:30px;
+    align-items: center;
+}
+.footerSocials h2 {
+    font-size: 1.2rem;
+    color: var(--TextColorSecondary);
+}
+.socialIcons{
+    display: flex;
+    gap: 10px;
+}
+.footerBottom {
+    text-align: center;
+    padding: 35px;
+    font-size: 1rem;
+    border-top: 1px solid var(--TextColorPrimary);
+}
 
 
 
