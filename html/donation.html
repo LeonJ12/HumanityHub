@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/Icon.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>HumanityHub - Humanitarna platforma</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="navContainer">
+                <img src="../images/Logo.png" alt="HumanityHub Logo">
+                <div class="navContent">
+                    <nav>
+                        <ul>
+                            <li><a href="../index.html">Početna</a></li>
+                            <li><a href="akcije.html">Akcije</a></li>
+                            <li><a href="../index.html#aboutSection">O nama</a></li>
+                            <li><a href="../index.html#footerSection">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                    <div class="navButton">
+                        <a href="donation.html" class="buttonMain">DONIRAJ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<section class="donationSection">
+    <div class="container actionsPage">
+
+        <div class="donationContainer">
+
+            <div class="donationHeader">
+                <h1>Donacija</h1>
+                <p>Hvala vam na povjerenju</p>
+            </div>
+
+            <form class="donationForm" action="#" method="post">
+
+                <fieldset>
+                    <legend>Odabir iznosa</legend>
+                    <input type="number" name="Amount" placeholder="Uplati iznos (€)">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Podaci donatora</legend>
+                    <label>
+                        Ime i prezime
+                        <input type="text" name="fullname" required>
+                    </label>
+
+                    <label>
+                        Email adresa
+                        <input type="email" name="email" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pregled donacije</legend>
+
+                    <table class="donationTable">
+                        <thead>
+                            <tr>
+                                <th>Stavka</th>
+                                <th>Vrijednost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Akcija</td>
+                                <td>Glad u Sudanu</td>
+                            </tr>
+                            <tr>
+                                <td>Vrsta pomoći</td>
+                                <td>Zaštita djece</td>
+                            </tr>
+                            <tr>
+                                <td>Valuta</td>
+                                <td>EUR (€)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+
+                <div class="formSubmit">
+                    <button type="submit" class="buttonMain">
+                        Potvrdi donaciju
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
