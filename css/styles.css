@@ -3,60 +3,72 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --PrimaryRed : #E53935;
-    --ContainerBackground : #ebebeb;
-    --WhiteBackground : #FFFFFF;
-    --TextColorPrimary : #000000;
-    --TextColorSecondary : #2D2D2D;
+
+:root {
+    --PrimaryRed: #E53935;
+    --ContainerBackground: #ebebeb;
+    --WhiteBackground: #FFFFFF;
+    --TextColorPrimary: #000000;
+    --TextColorSecondary: #2D2D2D;
 }
+
 body {
     font-family: "Raleway", sans-serif;
 }
-h1,h2 {
+
+h1,
+h2 {
     font-family: "Merriweather Sans", sans-serif;
 }
+
 p {
     color: var(--TextColorSecondary);
 }
+
 html {
-            scroll-behavior: smooth;
-        }
+    scroll-behavior: smooth;
+}
 
 
 
 
-header{
+header {
     padding-top: 35px;
     overflow: hidden;
     margin: 0 10px;
 }
-.container{
-        max-width: 1600px;
-        background-color: var(--ContainerBackground);
-        margin: auto;
-        padding: 0 20px;
-        border-radius: 20px;
+
+.container {
+    max-width: 1600px;
+    background-color: var(--ContainerBackground);
+    margin: auto;
+    padding: 0 20px;
+    border-radius: 20px;
 }
-.navContainer{
-    display:flex;
+
+.navContainer {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.navContent{
+
+.navContent {
     display: flex;
     gap: 80px;
 }
+
 nav ul {
-    display:flex;
+    display: flex;
     gap: 50px;
     list-style-type: none;
 }
+
 nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     color: var(--TextColorSecondary);
 }
+
 nav ul li a:hover {
     transition: 0.4s;
     opacity: 20%;
@@ -72,17 +84,20 @@ nav ul li a:hover {
     font-size: 1.2rem;
     font-weight: 600;
 }
+
 .buttonMain:hover {
     transition: 0.3s;
     color: var(--PrimaryRed);
     background-color: var(--WhiteBackground);
     border: 1px solid var(--PrimaryRed);
 }
+
 .navContainer img {
     animation: fadeIn-left 1.5s both;
 }
+
 .navContainer .navContent {
-    animation : fadeIn-right 1.5s 0.2s both;
+    animation: fadeIn-right 1.5s 0.2s both;
 }
 
 
@@ -92,10 +107,11 @@ section {
     margin: 0 10px;
 }
 
-.heroSection{
+.heroSection {
     height: calc(100vh - 116px);
 }
-.HeroContainer{
+
+.HeroContainer {
     background-image: url(../images/backgroundHero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -104,41 +120,49 @@ section {
     align-items: center;
     justify-content: center;
 }
-.heroContent{
-    display:flex;
+
+.heroContent {
+    display: flex;
     flex-direction: column;
-    gap:50px;
+    gap: 50px;
     max-width: 1300px;
 }
-.heroContent h1{
+
+.heroContent h1 {
     font-size: clamp(3rem, 5vw, 4.5rem);
 }
-.heroContent p{
+
+.heroContent p {
     font-size: 1.4rem;
 }
-.heroWrapper{
+
+.heroWrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.heroLocation{
-    display:flex;
-    gap:4px;
+
+.heroLocation {
+    display: flex;
+    gap: 4px;
     align-items: center;
 }
+
 .heroLocation h2 {
     font-size: 1rem;
 }
+
 .heroLocation img {
     max-width: 25px;
     max-height: 25px;
 }
+
 .heroButtons {
-    display:flex;
-    gap:30px;
+    display: flex;
+    gap: 30px;
 }
 
-.buttonSecondary{
+.buttonSecondary {
     padding: 15px 20px;
     border: 2px solid transparent;
     border-radius: 50px;
@@ -148,6 +172,7 @@ section {
     font-size: 1.2rem;
     font-weight: 600;
 }
+
 .buttonSecondary:hover {
     transition: 0.5s;
     color: var(--WhiteBackground);
@@ -156,44 +181,51 @@ section {
 }
 
 
-.actionsLocation{
-    display:flex;
-    gap:5px;
+.actionsLocation {
+    display: flex;
+    gap: 5px;
     align-items: center;
 }
+
 .actionsLocation h2 {
     font-size: 1rem;
-    color : var(--TextColorSecondary)
+    color: var(--TextColorSecondary)
 }
+
 .actionsLocation img {
     max-width: 25px;
     max-height: 25px;
     display: block;
 }
-.issueType{
-    display:flex;
-    gap:5px;
+
+.issueType {
+    display: flex;
+    gap: 5px;
     align-items: center;
 
 }
+
 .issueType h2 {
     font-size: 0.8rem;
-    color : var(--TextColorSecondary)
+    color: var(--TextColorSecondary)
 }
+
 .issueType img {
     max-width: 30px;
     max-height: 30px;
 }
 
-.moneyStatus{
-    display:flex;
-    gap:5px;
+.moneyStatus {
+    display: flex;
+    gap: 5px;
     align-items: center;
 }
-.moneyStatus h2{
+
+.moneyStatus h2 {
     font-size: 0.8rem;
-    color : var(--TextColorSecondary);
+    color: var(--TextColorSecondary);
 }
+
 .moneyStatus img {
     max-width: 30px;
     max-height: 30px;
@@ -208,9 +240,10 @@ section {
 }
 
 .previewText {
-    flex: 1.2; 
+    flex: 1.2;
 }
-.previewText h1{
+
+.previewText h1 {
     font-size: clamp(3rem, 5vw, 4.5rem);
 }
 
@@ -218,99 +251,118 @@ section {
     font-size: 1.3rem;
     line-height: 1.5;
 }
+
 .previewCard {
-    flex: 0.8; 
-    display:flex;
+    flex: 0.8;
+    display: flex;
     justify-content: center;
     max-width: 300px;
 }
 
-.actionCard{
-    display:flex;
+.actionCard {
+    display: flex;
     flex-direction: column;
     background-color: var(--WhiteBackground);
-    margin : 20px 0;
+    margin: 20px 0;
     border-radius: 20px;
     overflow: hidden;
 }
 
 .mainPicture {
-    height: 450px; 
+    height: 450px;
 }
+
 .mainPicture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .contentType {
-    display:flex;
-    gap:40px;
+    display: flex;
+    gap: 40px;
     justify-content: center;
 }
-.cardActivity
-{
-    display:flex;
+
+.cardActivity {
+    display: flex;
     align-items: center;
     gap: 50px;
     justify-content: center;
 }
-.actionCard:hover{
+
+.actionCard:hover {
     background-color: rgba(128, 128, 128, 0.452);
     transition: 0.5s;
 }
+
 .cardBody {
-    padding: 20px; 
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: 20px;
 }
-.arrow{
-    color:var(--TextColorPrimary);
+
+.arrow {
+    color: var(--TextColorPrimary);
     font-size: 1.5rem;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
+
 .arrow:hover {
     transform: translateX(8px);
     color: var(--PrimaryRed);
 }
 
 
-.aboutContent{
-    display:flex;
+.aboutContent {
+    display: flex;
     flex-direction: column;
-    gap:30px;
+    gap: 30px;
     padding: 30px 0;
     align-items: center;
 }
+
 .aboutContent h2 {
     font-size: 1.2rem;
-    color : var(--TextColorSecondary);
+    color: var(--TextColorSecondary);
 }
+
 .aboutMain {
-    display:flex;
+    display: flex;
     gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
 }
 
-.aboutDonators, .aboutMoney, .aboutYear  {
+.aboutDonators,
+.aboutMoney,
+.aboutYear {
     display: flex;
     flex: 1;
     flex-direction: column;
     align-items: center;
 }
 
-.aboutDonators h1:hover, .aboutMoney h1:hover, .aboutYear h1:hover{
+.aboutDonators h1:hover,
+.aboutMoney h1:hover,
+.aboutYear h1:hover {
     font-size: 5rem;
     color: var(--TextColorPrimary);
 }
-.aboutDonators h1, .aboutMoney h1 , .aboutYear h1{
+
+.aboutDonators h1,
+.aboutMoney h1,
+.aboutYear h1 {
     font-size: 5rem;
     color: var(--PrimaryRed);
 }
-.aboutDonators p, .aboutMoney p , .aboutYear p{
+
+.aboutDonators p,
+.aboutMoney p,
+.aboutYear p {
     font-size: 1rem;
     color: var(--TextColorSecondary);
 }
@@ -322,34 +374,39 @@ section {
     text-align: center;
 }
 
-.aboutGoals p{
+.aboutGoals p {
     font-size: 1.2rem;
     margin: 20px 0;
 }
+
 .goalsList {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
 .goalsList li {
     font-size: 1.1rem;
-    display:flex;
-    gap:5px;
+    display: flex;
+    gap: 5px;
 }
+
 .goalsList li::after {
     content: "✔";
     color: var(--PrimaryRed);
 }
+
 .visionWrapper {
-    display:flex;
-    gap:30px;
+    display: flex;
+    gap: 30px;
     width: 100%;
     justify-content: center;
     max-width: 900px;
     flex-wrap: wrap;
 }
-.visionCard{
+
+.visionCard {
     flex: 1;
     background-color: var(--WhiteBackground);
     border-top: 5px solid var(--PrimaryRed);
@@ -358,16 +415,19 @@ section {
     padding: 10px;
     transition: transform 0.3s ease;
 }
+
 .visionCard:hover {
     transform: translateY(-5px);
 }
-.visionCard h2{
+
+.visionCard h2 {
     font-size: 1.5rem;
-    color : var(--PrimaryRed);
+    color: var(--PrimaryRed);
 }
-.visionCard p{
+
+.visionCard p {
     font-size: 1rem;
-    color : var(--TextColorPrimary);
+    color: var(--TextColorPrimary);
 }
 
 footer {
@@ -375,74 +435,86 @@ footer {
     margin: 0 10px;
 }
 
-.footerContainer{
+.footerContainer {
     background-color: var(--WhiteBackground);
 }
 
-.footerContent{
-    display:grid;
+.footerContent {
+    display: grid;
     grid-template-columns: 1.5fr 1.2fr;
     gap: 50px;
 }
-.footerWeather{
+
+.footerWeather {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.footerWeather h2{
+
+.footerWeather h2 {
     font-size: 3rem;
     color: var(--PrimaryRed);
     font-weight: 800;
 }
-.footerWeather h2:hover{
+
+.footerWeather h2:hover {
     color: var(--ContainerBackground);
     transition: 0.5s;
 }
+
 .footerWeather p {
     font-size: 2rem;
 }
-.weatherFirst , .weatherSecond{
+
+.weatherFirst,
+.weatherSecond {
     display: flex;
     align-items: center;
     gap: 25px;
 }
 
-.footerContact{
+.footerContact {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
     align-items: center;
     grid-row: span 2;
     justify-content: center;
+    text-align: center;
 }
 
-.footerContact h2{
+.footerContact h2 {
     color: var(--TextColorPrimary);
     font-size: 1.5rem;
 }
-.footerContact p{
+
+.footerContact p {
     color: var(--TextColorSecondary);
     font-size: 1rem;
 }
+
 .footerContact a {
     text-decoration: none;
     color: var(--PrimaryRed);
     font-size: 1rem;
 }
 
-.footerSocials{
+.footerSocials {
     display: flex;
-    gap:30px;
+    gap: 30px;
     align-items: center;
 }
+
 .footerSocials h2 {
     font-size: 1.2rem;
     color: var(--TextColorSecondary);
 }
-.socialIcons{
+
+.socialIcons {
     display: flex;
     gap: 10px;
 }
+
 .footerBottom {
     text-align: center;
     padding: 35px;
@@ -454,61 +526,71 @@ footer {
     0% {
         transform: translateX(-100%);
         opacity: 0;
-        filter : blur(50px);
+        filter: blur(50px);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
         opacity: 1;
-        filter:blur(0);
+        filter: blur(0);
     }
 }
+
 @keyframes fadeIn-right {
     0% {
         transform: translateX(100%);
         opacity: 0;
-        filter : blur(50px);
+        filter: blur(50px);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
         opacity: 1;
-        filter:blur(0);
+        filter: blur(0);
     }
 }
+
 /* akcije.html */
-.actionsPage{
+.actionsPage {
     background-color: white;
 }
-.actionsHeader{
-    display:flex;
+
+.actionsHeader {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     padding: 20px;
+    text-align: center;
 }
+
 .actionsHeader h1 {
     font-size: 3rem;
     color: var(--PrimaryRed);
 }
-.actionsHeader h1:hover{
+
+.actionsHeader h1:hover {
     color: var(--TextColorPrimary);
     transition: 1s;
 }
-.actionsHeader p{
+
+.actionsHeader p {
     font-size: 1.5rem;
 }
+
 .actionsGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 30px;
 }
-.cardMod
-{
+
+.cardMod {
     background-color: var(--ContainerBackground);
 }
 
 /* donation.html */
-.donationContainer{
+.donationContainer {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -529,6 +611,7 @@ footer {
     font-size: 1rem;
     color: var(--TextColorSecondary);
 }
+
 .donationForm {
     display: flex;
     flex-direction: column;
@@ -570,13 +653,264 @@ table td {
 table th {
     color: var(--PrimaryRed);
 }
+
 .formSubmit {
     display: flex;
     justify-content: center;
 }
+
 .formSubmit button {
     font-size: 1.2rem;
     cursor: pointer;
 }
 
+/* js klase */
+.error {
+    font-size: 1rem;
+    color: var(--PrimaryRed);
+}
 
+#buttonTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    transform: scale(0);
+    transition: transform 0.5s;
+}
+
+#buttonTop.show {
+    transform: scale(1);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--PrimaryRed);
+}
+
+/*RESPONZIVNOST*/
+@media (max-width: 1024px) {
+    .hamburger {
+        display: block;
+        z-index: 10;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navContent {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--ContainerBackground);
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+        gap: 40px;
+    }
+
+    .navContent.active {
+        left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    nav ul li a {
+        font-size: 2rem;
+    }
+
+    .navButton a {
+        font-size: 2rem;
+    }
+
+    .navContainer .navContent {
+        animation: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .previewText p {
+        font-size: 1rem;
+    }
+
+    .footerWeather h2 {
+        font-size: 2rem;
+    }
+
+    .footerWeather p {
+        font-size: 1.3rem;
+    }
+
+    .footerContact h2 {
+        font-size: 1rem;
+    }
+
+    .footerContact p {
+        font-size: 0.8rem;
+    }
+
+    .footerSocials h2 {
+        font-size: 0.8rem;
+    }
+
+    .aboutDonators h1,
+    .aboutMoney h1,
+    .aboutYear h1 {
+        font-size: 3rem;
+    }
+
+    .aboutGoals p {
+        font-size: 1rem;
+    }
+
+    .goalsList li {
+        font-size: 0.9rem;
+    }
+
+    .actionsLocation h2 {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 652px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    section {
+        padding-top: 20px;
+    }
+
+    .heroContent {
+        gap: 30px;
+        text-align: center;
+    }
+
+    .heroContent h1 {
+        font-size: 2rem;
+    }
+
+    .heroContent p {
+        font-size: 1rem;
+    }
+
+    .heroWrapper {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .buttonMain,
+    .buttonSecondary {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .heroLocation {
+        justify-content: center;
+    }
+
+    .previewContent {
+        padding-top: 10px;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .previewText h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .previewText .actionsLocation {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .previewCard {
+        max-width: 100%;
+        flex: auto;
+    }
+
+    .aboutMain {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .visionWrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .weatherFirst,
+    .weatherSecond {
+        justify-content: center;
+    }
+
+    .footerSocials {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mainPicture {
+        height: 250px;
+    }
+
+    .contentType {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .actionsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .navContainer img {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .actionsHeader h1 {
+        font-size: 1.5rem;
+    }
+
+    .actionsHeader p {
+        font-size: 0.8rem;
+    }
+}

@@ -32,6 +32,11 @@
                         <a href="donation.html" class="buttonMain">DONIRAJ</a>
                     </div>
                 </div>
+                    <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
     </header>
@@ -50,19 +55,22 @@
 
                     <fieldset>
                         <legend>Odabir iznosa</legend>
-                        <input type="number" name="Amount" placeholder="Uplati iznos (€)">
+                        <input type="number" name="Amount" id="Amount" placeholder="Uplati iznos (€)">
+                        <div class="error"></div>
                     </fieldset>
 
                     <fieldset>
                         <legend>Podaci donatora</legend>
                         <label>
                             Ime i prezime
-                            <input type="text" name="fullname" required>
+                            <input type="text" name="fullname" id ="username" required>
+                            <div class="error"></div>
                         </label>
 
                         <label>
                             Email adresa
-                            <input type="email" name="email" required>
+                            <input type="email" name="email" id="email" required>
+                            <div class="error"></div>
                         </label>
                     </fieldset>
 
@@ -105,5 +113,8 @@
         </div>
     </section>
 
+    <a id="buttonTop"><img src="../images/up-arrow.png" alt="to top icon"></a>
+    
+    <script src="../script/scripts.js"></script>
 </body>
 </html>
