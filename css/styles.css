@@ -801,6 +801,17 @@ table th {
         padding: 0 10px;
     }
 
+    header {
+        padding-top: 20px;
+    }
+
+    .heroSection {
+        height: calc(100vh - 67.64px);
+    }
+    .HeroContainer{
+        background-position: center;
+    }
+
     section {
         padding-top: 20px;
     }
