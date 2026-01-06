@@ -149,8 +149,8 @@ if (actionsGrid) {
             const card = button.closest('.actionCard');
             const location = card.querySelector('.actionsLocation h2').innerText;
             const issue = card.querySelector('.issueType h2').innerText;
-            localStorage.setItem('Lokacija', location);
-            localStorage.setItem('Tip', issue);
+            sessionStorage.setItem('Lokacija', location);
+            sessionStorage.setItem('Tip', issue);
             window.location.href = 'donation.html';
         })
     })
@@ -158,8 +158,8 @@ if (actionsGrid) {
 const donationForm = document.querySelector('.donationForm');
 if (donationForm) {
 
-        const savedLocation = localStorage.getItem('Lokacija');
-        const savedType = localStorage.getItem('Tip');
+        const savedLocation = sessionStorage.getItem('Lokacija');
+        const savedType = sessionStorage.getItem('Tip');
 
 
         if (savedLocation && savedType) {
@@ -179,8 +179,8 @@ const previewCard = document.querySelector('.previewCard');
             homeButton.addEventListener('click', (e) => {
                 e.preventDefault();
 
-                localStorage.setItem('Lokacija', 'Sudan'); 
-                localStorage.setItem('Tip', 'Zaštita djece');
+                sessionStorage.setItem('Lokacija', 'Sudan'); 
+                sessionStorage.setItem('Tip', 'Zaštita djece');
 
                 window.location.href = homeButton.getAttribute('href');
             });
