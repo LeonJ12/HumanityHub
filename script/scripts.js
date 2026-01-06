@@ -140,3 +140,49 @@ navLinks.forEach(element => {
     })
 });
 
+const actionsGrid = document.querySelector('.actionsGrid');
+if (actionsGrid) {
+    const Buttons = document.querySelectorAll('.actionCard .cardActivity .buttonMain');
+    Buttons.forEach(button => {
+        button.addEventListener('click', (e) =>{
+            e.preventDefault();
+            const card = button.closest('.actionCard');
+            const location = card.querySelector('.actionsLocation h2').innerText;
+            const issue = card.querySelector('.issueType h2').innerText;
+            localStorage.setItem('Lokacija', location);
+            localStorage.setItem('Tip', issue);
+            window.location.href = 'donation.html';
+        })
+    })
+};
+const donationForm = document.querySelector('.donationForm');
+if (donationForm) {
+
+        const savedLocation = localStorage.getItem('Lokacija');
+        const savedType = localStorage.getItem('Tip');
+
+
+        if (savedLocation && savedType) {
+            const locationCell = document.getElementById('location');
+            const typeCell = document.getElementById('type');
+            locationCell.innerText = savedLocation; 
+            typeCell.innerText = savedType;
+        }
+    };
+
+const previewCard = document.querySelector('.previewCard');
+
+    if (previewCard) {
+        const homeButton = previewCard.querySelector('.buttonMain');
+
+        if (homeButton) {
+            homeButton.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                localStorage.setItem('Lokacija', 'Sudan'); 
+                localStorage.setItem('Tip', 'Zaštita djece');
+
+                window.location.href = homeButton.getAttribute('href');
+            });
+        }
+    }
