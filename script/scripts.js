@@ -186,3 +186,42 @@ const previewCard = document.querySelector('.previewCard');
             });
         }
     }
+
+const apiKey = 'LGCDL1P7N8CB';
+const lat = 15.50; 
+const lng = 32.56;
+
+async function dohvatiVrijeme() {
+    const url = 'https://api.timezonedb.com/v2.1/get-time-zone?key=LGCDL1P7N8CB&format=json&by=position&lat=15.50&lng=32.56';
+
+    try {
+        const odgovor = await fetch(url);
+        const podaci = await odgovor.json();
+
+        if (podaci.status === "OK") {
+
+            const samoVrijeme = podaci.formatted.split(' ')[1].substring(0, 5);
+            document.getElementById('vrijeme').innerText = samoVrijeme;
+        } 
+        else {
+            console.error("Greška");
+        }
+    } catch (greska) {
+        console.error(greska);
+    }
+}
+async function dohvatiTemperaturu() {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m`;
+        try {
+        const odgovor = await fetch(url);
+        const podaci = await odgovor.json();
+        const temperatura = podaci.current.temperature_2m;
+        document.getElementById('temperatura').innerText = temperatura + "°C";
+       
+    } catch (greska) {
+        console.error(greska);
+    }
+}
+dohvatiVrijeme();
+dohvatiTemperaturu();
+
