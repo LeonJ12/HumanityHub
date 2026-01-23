@@ -1,3 +1,8 @@
+const logo = document.querySelector('#logo');
+logo.addEventListener("click",() => {
+window.location.href="/index.html";
+});
+
 const form = document.querySelector('.donationForm');
 const username = document.getElementById('username');
 const money = document.getElementById('Amount');

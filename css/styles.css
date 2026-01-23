@@ -33,13 +33,13 @@ html {
 
 
 header {
-    padding-top: 35px;
+    padding-top: 25px;
     overflow: hidden;
     margin: 0 10px;
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 100%;
     background-color: var(--ContainerBackground);
     margin: auto;
     padding: 0 20px;
@@ -94,6 +94,7 @@ nav ul li a:hover {
 
 .navContainer img {
     animation: fadeIn-left 1.5s both;
+    cursor: pointer;
 }
 
 .navContainer .navContent {
@@ -103,12 +104,12 @@ nav ul li a:hover {
 
 
 section {
-    padding-top: 35px;
+    padding-top: 25px;
     margin: 0 10px;
 }
 
 .heroSection {
-    height: calc(100vh - 116px);
+    height: calc(100vh - 106px);
 }
 
 .HeroContainer {
@@ -431,7 +432,7 @@ section {
 }
 
 footer {
-    padding-top: 35px;
+    padding-top: 25px;
     margin: 0 10px;
 }
 
@@ -517,9 +518,13 @@ footer {
 
 .footerBottom {
     text-align: center;
-    padding: 35px;
+    padding: 25px;
     font-size: 1rem;
     border-top: 1px solid var(--TextColorPrimary);
+}
+.footerBottom p:hover{
+    color: var(--PrimaryRed);
+    transition: 0.3s;
 }
 
 @keyframes fadeIn-left {
@@ -583,6 +588,8 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 30px;
+    max-width: 1600px;
+    margin: auto;
 }
 
 .cardMod {
@@ -595,7 +602,7 @@ footer {
     flex-direction: column;
     gap: 40px;
     align-items: center;
-    padding-bottom: 35px;
+    padding-bottom: 25px;
 }
 
 .donationHeader {
@@ -802,7 +809,7 @@ table th {
     }
 
     header {
-        padding-top: 20px;
+        padding-top: 15px;
     }
 
     .heroSection {
@@ -813,7 +820,7 @@ table th {
     }
 
     section {
-        padding-top: 20px;
+        padding-top: 15px;
     }
 
     .heroContent {
