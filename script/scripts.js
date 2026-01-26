@@ -1,8 +1,3 @@
-const logo = document.querySelector('#logo');
-logo.addEventListener("click",() => {
-window.location.href="/index.html";
-});
-
 const form = document.querySelector('.donationForm');
 const username = document.getElementById('username');
 const money = document.getElementById('Amount');
@@ -110,6 +105,10 @@ const setSuccess = (element) => {
     }
 };
 
+
+
+
+
 const toTopButton = document.querySelector('#buttonTop');
 
 document.addEventListener('scroll', () =>{
@@ -128,6 +127,9 @@ toTopButton.addEventListener('click', (e) =>{
 });
 
 
+
+
+
 const hambMeni = document.querySelector(".hamburger");
 const nav = document.querySelector(".navContent");
 
@@ -144,6 +146,9 @@ navLinks.forEach(element => {
     nav.classList.remove('active');
     })
 });
+
+
+
 
 const actionsGrid = document.querySelector('.actionsGrid');
 if (actionsGrid) {
@@ -191,6 +196,8 @@ const previewCard = document.querySelector('.previewCard');
             });
         }
     }
+
+
 
 const apiKey = 'LGCDL1P7N8CB';
 const lat = 15.50; 
