@@ -11,7 +11,7 @@ if(form){
 }
 
 
-const validateInputs = () => {
+const validateInputs = async () => {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const moneyValue = money.value.trim();
@@ -52,7 +52,32 @@ const validateInputs = () => {
 
     if(isValid)
     {
-        alert('Uspješno poslano, hvala vam');
+       const donationDto = {
+        campaignId : 4,
+        amount : parseFloat(moneyValue),
+        donorName : usernameValue,
+        donorEmail : emailValue
+       }
+       try{
+        const response = await fetch('https://localhost:7091/api/Donation',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(donationDto)
+            }
+        );
+        if(response.ok)
+        {
+            const result = await response.json();
+                alert(`Hvala vam na donaciji, ${result.donorName}!`);
+        }
+       }
+       catch(error)
+       {
+        console.error("Greska sa backend")
+       }
     }
 }
 
@@ -243,3 +268,4 @@ async function dohvatiTemperaturu() {
 }
 dohvatiTemperaturu();
 }
+
