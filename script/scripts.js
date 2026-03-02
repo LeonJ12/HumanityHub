@@ -73,6 +73,10 @@ const validateInputs = async () => {
             const result = await response.json();
                 alert(`Hvala vam na donaciji, ${result.donorName}!`);
         }
+        else {
+            const errorDetails = await response.json();
+            console.log("Greška s backenda:", errorDetails);
+        }
        }
        catch(error)
        {
