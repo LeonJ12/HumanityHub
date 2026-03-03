@@ -83,6 +83,7 @@ nav ul li a:hover {
     background-color: var(--PrimaryRed);
     font-size: 1.2rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .buttonMain:hover {

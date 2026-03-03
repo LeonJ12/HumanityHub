@@ -53,7 +53,7 @@ const validateInputs = async () => {
     if(isValid)
     {
        const donationDto = {
-        campaignId : 4,
+        campaignId : parseInt(sessionStorage.getItem('CampaignId')),
         amount : parseFloat(moneyValue),
         donorName : usernameValue,
         donorEmail : emailValue
@@ -72,6 +72,7 @@ const validateInputs = async () => {
         {
             const result = await response.json();
                 alert(`Hvala vam na donaciji, ${result.donorName}!`);
+                form.reset();
         }
         else {
             const errorDetails = await response.json();
@@ -92,24 +93,7 @@ const validateEmail = (email) => {
 };
 
 const validateUsername = (username) => {
-    if(!username.includes(' '))
-    {
-        return false;
-    }
-    const wordParts = username.split(' ');
-    for(let part of wordParts)
-    {
-        for(let char of part)
-        {
-            if (
-                (char < 'A' || char > 'Z') &&
-                (char < 'a' || char > 'z')
-            ) {
-                return false;
-            }
-        }
-    }
-    return true;
+     return /^[A-Za-zČčĆćŽžŠšĐđ]+(\s[A-Za-zČčĆćŽžŠšĐđ]+)+$/.test(username);
 };
 
 const validateMoney = (money) => {
@@ -177,23 +161,7 @@ navLinks.forEach(element => {
 });
 
 
-
-
-const actionsGrid = document.querySelector('.actionsGrid');
-if (actionsGrid) {
-    const Buttons = document.querySelectorAll('.actionCard .cardActivity .buttonMain');
-    Buttons.forEach(button => {
-        button.addEventListener('click', (e) =>{
-            e.preventDefault();
-            const card = button.closest('.actionCard');
-            const location = card.querySelector('.actionsLocation h2').innerText;
-            const issue = card.querySelector('.issueType h2').innerText;
-            sessionStorage.setItem('Lokacija', location);
-            sessionStorage.setItem('Tip', issue);
-            window.location.href = 'donation.html';
-        })
-    })
-};
+///////////
 const donationForm = document.querySelector('.donationForm');
 if (donationForm) {
 
@@ -208,7 +176,6 @@ if (donationForm) {
             typeCell.innerText = savedType;
         }
     };
-
 const previewCard = document.querySelector('.previewCard');
 
     if (previewCard) {
@@ -220,15 +187,14 @@ const previewCard = document.querySelector('.previewCard');
 
                 sessionStorage.setItem('Lokacija', 'Sudan'); 
                 sessionStorage.setItem('Tip', 'Zaštita djece');
-
+                sessionStorage.setItem('CampaignId',1);
                 window.location.href = homeButton.getAttribute('href');
             });
         }
     }
+////////////
 
 
-
-const apiKey = 'LGCDL1P7N8CB';
 const lat = 15.50; 
 const lng = 32.56;
 const vrijemeText = document.getElementById('vrijeme');
@@ -272,4 +238,101 @@ async function dohvatiTemperaturu() {
 }
 dohvatiTemperaturu();
 }
+////////
+const campaignImages = 
+{
+    "Sudan" : "../images/sudan.jpg",
+    "Ukrajina" : "../images/ukrajina.png",
+    "Afganistan" : "../images/afganistan.jpg",
+    "Kongo" : "../images/kongo.png",
+    "Sirija" : "../images/siria.png",
+    "Brazil" : "../images/brazil.png"
+}
+const issueImages =
+{
+    "Epidemija" : "../images/epidemija.png",
+    "Rat" : "../images/swords.png",
+    "Zaštita djece" : "../images/child-abuse.png"
+} 
+function getImageByLocation(title)
+{
+    return campaignImages[title];
+}
+function getImagebyIssue(issue)
+{
+    return issueImages[issue];
+}
+async function dohvatiKampanje()
+{
+    try{
+        const response = await fetch('https://localhost:7091/api/Campaign');
+        if(response.ok){
+            const kampanje = await response.json();
+            kampanje.forEach(kampanja => {
+                const imageSrc = getImageByLocation(kampanja.title);
+                const issueSrc = getImagebyIssue(kampanja.descriptionIssue);
+                CreateCampaign(kampanja,imageSrc,issueSrc);
+            }
+        );
+        }
+        else 
+        { 
+            const errorDetails = await response.json();
+            console.log("Greška s backenda:", errorDetails);
+        }
+    }
+    catch(error)
+    {
+        console.error("Greska sa backendom");
+    }
+}
+function CreateCampaign(kampanja,imageSrc,issueSrc)
+{
+    const campaignsGrid = document.querySelector(".actionsGrid");
+        const card = document.createElement('div');
+        card.className = "actionCard cardMod";
+        card.innerHTML =
+        `
+        <div class="mainPicture">
+            <img src="${imageSrc}" alt="${kampanja.title} picture">
+        </div>
+        <div class="cardBody">
+            <div class="contentType">
+                <div class="issueType">
+                    <img src="${issueSrc}" alt="${kampanja.descriptionIssue} icon">
+                    <h2>${kampanja.descriptionIssue}</h2>
+                </div>
+                <div class="moneyStatus">
+                    <img src="../images/money.png" alt="coins icon">
+                    <h2>${kampanja.goalAmount}</h2>
+                </div>
+                <div class="actionsLocation">
+                    <img src="../images/location-pin.png" alt="location Icon">
+                    <h2>${kampanja.title}</h2>
+                </div>
+            </div>
+            <div class="cardActivity">
+                <a data-href="donation.html" class="buttonMain" data-campaign-id="${kampanja.id}">Pridruži se</a>
+            </div>
+        </div>
+        `
+        campaignsGrid.appendChild(card);
+        const button = card.querySelector('.actionCard .cardActivity .buttonMain');
+        button.addEventListener('click', (e) =>{
+            e.preventDefault();
+            const campaignId = button.getAttribute('data-campaign-id');
+            const card = button.closest('.actionCard');
+            const location = card.querySelector('.actionsLocation h2').innerText;
+            const issue = card.querySelector('.issueType h2').innerText;
+            sessionStorage.setItem('Lokacija', location);
+            sessionStorage.setItem('Tip', issue);
+            sessionStorage.setItem('CampaignId',campaignId);
+            window.location.href = 'donation.html';
+        })
+}
 
+const actionsGrid = document.querySelector('.actionsGrid');
+
+if (actionsGrid) {
+    dohvatiKampanje();
+};
