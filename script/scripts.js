@@ -56,10 +56,11 @@ const validateInputs = async () => {
         campaignId : parseInt(sessionStorage.getItem('CampaignId')),
         amount : parseFloat(moneyValue),
         donorName : usernameValue,
-        donorEmail : emailValue
+        donorEmail : emailValue,
+        successUrl: 'http://127.0.0.1:5500/html/success.html',
+        cancelUrl: 'http://127.0.0.1:5500/html/cancel.html'
        }
-       try{
-        const response = await fetch('https://localhost:7091/api/Donation',
+        const response = await fetch('https://localhost:7091/api/Payment/checkout',
             {
                 method: 'POST',
                 headers: {
@@ -71,7 +72,7 @@ const validateInputs = async () => {
         if(response.ok)
         {
             const result = await response.json();
-                alert(`Hvala vam na donaciji, ${result.donorName}!`);
+                window.location.href = result.url;
                 form.reset();
         }
         else {
@@ -79,12 +80,7 @@ const validateInputs = async () => {
             console.log("Greška s backenda:", errorDetails);
         }
        }
-       catch(error)
-       {
-        console.error("Greska sa backend")
-       }
     }
-}
 
 const validateEmail = (email) => {
   return email.match(
@@ -264,8 +260,12 @@ function getImagebyIssue(issue)
 }
 async function dohvatiKampanje()
 {
-    try{
-        const response = await fetch('https://localhost:7091/api/Campaign');
+        const response = await fetch('https://localhost:7091/api/Campaign',{
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Api-key' : 'Leon12345Jerkovic*'
+            }}
+        );
         if(response.ok){
             const kampanje = await response.json();
             kampanje.forEach(kampanja => {
@@ -280,11 +280,6 @@ async function dohvatiKampanje()
             const errorDetails = await response.json();
             console.log("Greška s backenda:", errorDetails);
         }
-    }
-    catch(error)
-    {
-        console.error("Greska sa backendom");
-    }
 }
 function CreateCampaign(kampanja,imageSrc,issueSrc)
 {

@@ -110,7 +110,7 @@ section {
 }
 
 .heroSection {
-    height: calc(100vh - 106px);
+    height: calc(100vh - 110px);
 }
 
 .HeroContainer {
@@ -703,6 +703,27 @@ table th {
     margin: 5px auto;
     background-color: var(--PrimaryRed);
 }
+.ResponsePage{
+    background-color: transparent;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 135px);
+    justify-content: center;
+}
+.ResponsePage h1{
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: green;
+}
+.ResponsePage p{
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+.ResponsePage h1.cancellation{
+    color: red;
+}
 
 /*RESPONZIVNOST*/
 @media (max-width: 1024px) {
@@ -803,7 +824,6 @@ table th {
         font-size: 0.8rem;
     }
 }
-
 @media (max-width: 652px) {
     .container {
         padding: 0 10px;
