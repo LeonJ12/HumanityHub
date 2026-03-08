@@ -158,8 +158,7 @@ navLinks.forEach(element => {
 
 
 ///////////
-const donationForm = document.querySelector('.donationForm');
-if (donationForm) {
+if (form) {
 
         const savedLocation = sessionStorage.getItem('Lokacija');
         const savedType = sessionStorage.getItem('Tip');
