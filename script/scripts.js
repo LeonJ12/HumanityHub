@@ -260,12 +260,7 @@ function getImagebyIssue(issue)
 }
 async function dohvatiKampanje()
 {
-        const response = await fetch('https://localhost:7091/api/Campaign',{
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Api-key' : 'Leon12345Jerkovic*'
-            }}
-        );
+        const response = await fetch('https://localhost:7091/api/Campaign');
         if(response.ok){
             const kampanje = await response.json();
             kampanje.forEach(kampanja => {
