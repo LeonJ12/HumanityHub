@@ -57,8 +57,8 @@ const validateInputs = async () => {
         amount : parseFloat(moneyValue),
         donorName : usernameValue,
         donorEmail : emailValue,
-        successUrl: 'http://127.0.0.1:5500/html/success.html',
-        cancelUrl: 'http://127.0.0.1:5500/html/cancel.html'
+        successUrl: 'https://leonj12.github.io/HumanityHub/html/success.html',
+        cancelUrl: 'https://leonj12.github.io/HumanityHub/html/cancel.html'
        }
         const response = await fetch('https://humanityhub-hca9a3e0fda5asge.westeurope-01.azurewebsites.net/api/Payment/checkout',
             {
