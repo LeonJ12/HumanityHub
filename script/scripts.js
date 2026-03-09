@@ -187,7 +187,7 @@ const previewCard = document.querySelector('.previewCard');
             });
         }
     }
-////////////
+
 
 
 const lat = 15.50; 
