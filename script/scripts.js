@@ -157,7 +157,7 @@ navLinks.forEach(element => {
 });
 
 
-///////////
+
 if (form) {
 
         const savedLocation = sessionStorage.getItem('Lokacija');
@@ -233,7 +233,7 @@ async function dohvatiTemperaturu() {
 }
 dohvatiTemperaturu();
 }
-////////
+
 const campaignImages = 
 {
     "Sudan" : "../images/sudan.jpg",
