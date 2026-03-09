@@ -60,7 +60,7 @@ const validateInputs = async () => {
         successUrl: 'http://127.0.0.1:5500/html/success.html',
         cancelUrl: 'http://127.0.0.1:5500/html/cancel.html'
        }
-        const response = await fetch('https://localhost:7091/api/Payment/checkout',
+        const response = await fetch('https://humanityhub-hca9a3e0fda5asge.westeurope-01.azurewebsites.net/api/Payment/checkout',
             {
                 method: 'POST',
                 headers: {
@@ -259,7 +259,7 @@ function getImagebyIssue(issue)
 }
 async function dohvatiKampanje()
 {
-        const response = await fetch('https://localhost:7091/api/Campaign');
+        const response = await fetch('https://humanityhub-hca9a3e0fda5asge.westeurope-01.azurewebsites.net/api/Campaign');
         if(response.ok){
             const kampanje = await response.json();
             kampanje.forEach(kampanja => {
