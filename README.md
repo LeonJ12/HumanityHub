@@ -1,13 +1,18 @@
-HumanityHub is a humanitarian donation platform that enables users to donate to active campaigns through Stripe payment integration. 
-The project consists of an HTML, CSS, and JavaScript frontend hosted on GitHub Pages and an ASP.NET Core backend hosted on Azure App Service. (https://github.com/LeonJ12/HumanityHub-Backend)
+# HumanityHub - Full Stack Web App
+
+HumanityHub is a full-stack humanitarian donation platform that allows users to support active campaigns through secure Stripe payment processing.
+The project consists of a static frontend built with HTML, CSS, and JavaScript hosted on GitHub Pages, and an ASP.NET Core backend API hosted on Azure App Service.
+
+Backend repository:
+https://github.com/LeonJ12/HumanityHub-Backend
 
 ## Tech Stack
-- Layered Architecture (N-Tier)
   
 ### Frontend
-- **HTML/CSS/JavaScript** — JS, no frameworks
-- **GitHub Pages** — Static hosting
-- Session storage, Weather and Time API
+- **HTML/CSS/JavaScript**
+- Vanilla JavaScript, functionalities
+- Session storage for client-side state
+- Weather and Time API integration
 
 ### Backend
 - **ASP.NET Core 10** — REST API - Layered Architecture
@@ -15,9 +20,10 @@ The project consists of an HTML, CSS, and JavaScript frontend hosted on GitHub P
 - **PostgreSQL (Neon)** — Cloud database
 - **Npgsql** — PostgreSQL driver for .NET
 - **Stripe.net** — Payment processing
-- **Swashbuckle** — Swagger/OpenAPI documentation
+- **Swashbuckle** — Swagger
 
 ### Infrastructure
+- **GitHub Pages** — Frontend hosting
 - **Azure App Service (Windows, F1 Free)** — Backend hosting
 - **Neon** — Serverless PostgreSQL hosting
 - **Stripe** — Payment gateway (Checkout + Webhooks)
