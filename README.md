@@ -69,6 +69,7 @@ https://leonj12.github.io/HumanityHub/
 - API Key middleware protecting admin endpoints
 - Stripe signature validation for secure webhook processing
 - Data annotations validation for automatic request validation
+- Rate Limiter protects an app from abuse by limiting the number of requests a user or client can make in a given time period.
 
 **Error Handling**
 - Global exception handler middleware
